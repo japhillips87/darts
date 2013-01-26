@@ -1,5 +1,5 @@
 class Darts
-  RADIUSES = [0.5, 1.25, 4.025, 4.2, 6.525, 6.7]
+  RADIUSES = [0.5, 1.25, 4.025, 4.2, 6.525, 6.7, Float::INFINITY]
   SLICES = [6, 13, 4, 18, 1, 20, 5, 12, 9, 14, 11, 8, 16, 7, 19, 3, 17, 2, 15, 10]
   attr_accessor :x, :y, :theta, :distance
 
@@ -21,6 +21,8 @@ class Darts
       slice * 3
     when 6
       slice * 2
+    when 7
+      0
     else
       slice
     end

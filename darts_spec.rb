@@ -29,6 +29,10 @@ describe Darts do
     it 'should return a score of 50 for 0, 0' do
       Darts.new(0,0).score.should == 50
     end
+    
+    it 'should return a score of 0 for 15, 15' do
+      Darts.new(15,15).score.should == 0
+    end
   end
 
   describe 'get_theta' do
@@ -163,6 +167,11 @@ describe Darts do
     it 'should return ring 6 for 6.7' do
       @darts.distance = 6.7 
       @darts.ring.should == 6
+    end
+
+    it 'should return ring 7 for 6.8' do
+      @darts.distance = 6.8 
+      @darts.ring.should == 7
     end
   end
 end
